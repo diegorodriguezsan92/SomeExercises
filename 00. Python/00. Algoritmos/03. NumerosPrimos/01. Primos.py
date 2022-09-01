@@ -11,21 +11,3 @@ if esPrimo:
     print("Es PRIMO")
 else:
     print("NO es primo")
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
