@@ -66,7 +66,7 @@
             // lblHistorial
             // 
             this.lblHistorial.AutoSize = true;
-            this.lblHistorial.Location = new System.Drawing.Point(30, 9);
+            this.lblHistorial.Location = new System.Drawing.Point(35, 21);
             this.lblHistorial.Name = "lblHistorial";
             this.lblHistorial.Size = new System.Drawing.Size(0, 13);
             this.lblHistorial.TabIndex = 1;
@@ -190,6 +190,7 @@
             this.bttDot.TabIndex = 12;
             this.bttDot.Text = ".";
             this.bttDot.UseVisualStyleBackColor = true;
+            this.bttDot.Click += new System.EventHandler(this.bttDot_Click);
             // 
             // bttMultiply
             // 
@@ -266,6 +267,7 @@
             this.bttReset.TabIndex = 19;
             this.bttReset.Text = "C";
             this.bttReset.UseVisualStyleBackColor = true;
+            this.bttReset.Click += new System.EventHandler(this.bttReset_Click);
             // 
             // bttDelete
             // 
@@ -276,6 +278,7 @@
             this.bttDelete.TabIndex = 20;
             this.bttDelete.Text = "<";
             this.bttDelete.UseVisualStyleBackColor = true;
+            this.bttDelete.Click += new System.EventHandler(this.bttDelete_Click);
             // 
             // Form1
             // 

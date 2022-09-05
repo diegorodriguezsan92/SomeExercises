@@ -27,7 +27,7 @@ namespace Calculator
         double valor2 = 0;
 
         Operacion operador = Operacion.NoDefinida;
-
+        bool numeroLeido = false;
 
         public Form1()
         {
@@ -36,6 +36,7 @@ namespace Calculator
 
         private void ReadNumber(string number)
         {
+            numeroLeido = true;
             if (resultBox.Text == "0" && resultBox.Text != null)
             {
                 resultBox.Text = number;
@@ -46,16 +47,38 @@ namespace Calculator
             }
         }
 
-        private double EjecutarOperacion(string operador)
+        private double EjecutarOperacion()
         {
             double resultado = 0;
             switch (operador)
             {
-                case "+":
+                case Operacion.Suma:
                     resultado = valor1 + valor2;
                     break;
-                case "-":
+
+                case Operacion.Resta:
                     resultado = valor1 - valor2;
+                    break;
+
+                case Operacion.Division:
+                    if (valor2 == 0)
+                    {
+                        //MessageBox.Show("Math ERROR: no puede dividir entre 0");  Esta opción nos muestra un mensaje emergente.
+                        lblHistorial.Text = "Math ERROR: no puede dividir entre 0";
+                        resultado = 0;
+                    }
+                    else
+                    {
+                        resultado = valor1 / valor2;
+                    }
+                    break;
+
+                case Operacion.Multiplicacion:
+                    resultado = valor1 * valor2;
+                    break;
+
+                case Operacion.Modulo:
+                    resultado = valor1 % valor2;
                     break;
             }
             return resultado;
@@ -64,19 +87,20 @@ namespace Calculator
 
 
 
-    private void Form1_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }
 
         private void btt0_Click(object sender, EventArgs e)
         {
+            numeroLeido = true;
             if (resultBox.Text == "0")
             {
                 return;
             }
             else
-            { 
+            {
                 resultBox.Text += "0";
             }
         }
@@ -88,7 +112,7 @@ namespace Calculator
 
         private void button2_Click(object sender, EventArgs e)
         {
-        ReadNumber("2");
+            ReadNumber("2");
         }
         private void btt3_Click(object sender, EventArgs e)
         {
@@ -126,7 +150,7 @@ namespace Calculator
         }
 
 
-        private void ObtenerValor (string operador)
+        private void ObtenerValor(string operador)
         {
             valor1 = Convert.ToDouble(resultBox.Text);
             lblHistorial.Text = resultBox.Text + operador;
@@ -142,13 +166,14 @@ namespace Calculator
 
         private void bttResult_Click(object sender, EventArgs e)
         {
-            if (valor2 == 0)
+            if (valor2 == 0 && numeroLeido)
             {
                 valor2 = Convert.ToDouble(resultBox.Text);
-                lblHistorial.Text += valor2 + "+";
-                double resultado = EjecutarOperacion("+");
+                lblHistorial.Text += valor2 + "=";
+                double resultado = EjecutarOperacion();
                 valor1 = 0;
                 valor2 = 0;
+                numeroLeido = false;
                 resultBox.Text = Convert.ToString(resultado);
             }
         }
@@ -175,6 +200,45 @@ namespace Calculator
         {
             operador = Operacion.Modulo;
             ObtenerValor("%");
+        }
+
+        private void bttReset_Click(object sender, EventArgs e)
+        {
+            resultBox.Text = "0";
+            lblHistorial.Text = "";
+        }
+
+        private void bttDelete_Click(object sender, EventArgs e)
+        {
+            if (resultBox.Text.Length > 1)
+            {
+                string txtResultado = resultBox.Text;
+                txtResultado = txtResultado.Substring(0, txtResultado.Length - 1);
+
+                if (txtResultado.Length == 1 && txtResultado.Contains("-"))
+                {
+                    resultBox.Text = "0";
+                }
+
+                else
+                {
+                    resultBox.Text = txtResultado;
+                }
+
+            }
+            else
+            {
+                resultBox.Text = "0";
+            }
+        }
+
+        private void bttDot_Click(object sender, EventArgs e)
+        {
+            if (resultBox.Text.Contains(","))
+            {
+                return;
+            }
+            resultBox.Text += ",";
         }
     }
 }
