@@ -20,3 +20,14 @@ C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator\Calculator\obj\Debug\C
 C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
 C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator\Calculator\obj\Debug\Calculator.exe
 C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator\Calculator\obj\Debug\Calculator.pdb
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\bin\Debug\Calculator.exe.config
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\bin\Debug\Calculator.exe
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\bin\Debug\Calculator.pdb
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.csproj.AssemblyReference.cache
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.csproj.SuggestedBindingRedirects.cache
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.Properties.Resources.resources
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.csproj.GenerateResource.cache
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.exe
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.pdb
+C:\Users\Diego\Documents\Ejercicios\01. C#\00. Calculator with WinForm\Calculator\obj\Debug\Calculator.Calculator.resources

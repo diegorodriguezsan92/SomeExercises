@@ -1,6 +1,6 @@
 ﻿namespace Calculator
 {
-    partial class Form1
+    partial class Calculator
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -280,7 +280,7 @@
             this.bttDelete.UseVisualStyleBackColor = true;
             this.bttDelete.Click += new System.EventHandler(this.bttDelete_Click);
             // 
-            // Form1
+            // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -306,8 +306,8 @@
             this.Controls.Add(this.btt1);
             this.Controls.Add(this.lblHistorial);
             this.Controls.Add(this.resultBox);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "Calculator";
+            this.Text = "Calculator";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -21,7 +21,7 @@ namespace Calculator
         Modulo = 5
     }
 
-    public partial class Form1 : Form
+    public partial class Calculator : Form
     {
         double valor1 = 0;
         double valor2 = 0;
@@ -29,7 +29,7 @@ namespace Calculator
         Operacion operador = Operacion.NoDefinida;
         bool numeroLeido = false;
 
-        public Form1()
+        public Calculator()
         {
             InitializeComponent();
         }
